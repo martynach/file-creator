@@ -25,3 +25,9 @@ steps:
 
 - script: |
     node txt/SimpleFileCreator.js
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'message.txt'
+    publishLocation: 'Container'
