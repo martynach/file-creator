@@ -14,8 +14,8 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, variable: $(Build.ArtifactStagingDirectory) and deploy your project.
-    echo See https://aka.ms/yaml
+    echo Build.ArtifactStagingDirectory: $(Build.ArtifactStagingDirectory)
+    echo System.DefaultWorkingDirectory: $(System.DefaultWorkingDirectory)
   displayName: 'Run a multi-line script'
 
 - task: NodeTaskRunnerInstaller@0
@@ -29,7 +29,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '.'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/files'
     Contents: '*.txt'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
