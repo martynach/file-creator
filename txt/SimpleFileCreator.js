@@ -7,7 +7,6 @@ console.log("Filename: ")
 console.log(__filename)
 
 const filesDirectory = "../files";
-const fileName = filesDirectory + "/message.txt";
 
 function CreateDirectoryFile(message) {
     fs.mkdir("../files", function(error) {
@@ -15,13 +14,13 @@ function CreateDirectoryFile(message) {
             console.log(`ERROR: ${error}`);
             process.exit();
         } else {
-            WriteFile(message);
+            WriteFile(fileName, message);
         }
     })
 
 }
 
-function WriteFile(message) {
+function WriteFile(fileName, message) {
     fs.writeFile(fileName, message, function (err) {
         if (err) {
             throw err;
@@ -41,7 +40,8 @@ function CreateFile() {
     }
 }
 
-CreateFile("This text should be inside created file!");
+// CreateFile("This text should be inside created file!");
+WriteFile("message.txt", "This text should be inside created file!");
 
 
 
