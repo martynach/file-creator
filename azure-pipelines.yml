@@ -24,4 +24,4 @@ steps:
   displayName: 'Install node'
 
 - script: |
-    node txt/TxtFileCreator.js
+    node txt/SimpleFileCreator.js
