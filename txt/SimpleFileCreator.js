@@ -2,7 +2,7 @@ const fs = require("fs");
 
 
 
-const filename = "message.txt";
+const filename = "files/message.txt";
 
 function WriteFile(message) {
     fs.writeFile(filename, message, function (err) {
