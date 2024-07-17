@@ -8,7 +8,7 @@ console.log(__filename)
 
 
 
-const filename = "../files/message.txt";
+const filename = "message.txt";
 
 function WriteFile(message) {
     fs.writeFile(filename, message, function (err) {
