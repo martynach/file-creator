@@ -18,8 +18,12 @@ steps:
   displayName: 'Shows current location'
 
 - script: |
-    echo Hello ${{name}} ${{surname}} your age is: ${{age}}
-  displayName: 'display variables'
+    echo Hello $(name) $(surname) your age is: $(age) macro syntax
+  displayName: 'display variables with macro syntax'
+
+- script: |
+    echo Hello ${{variables.name}} ${{variables.surname}} your age is: ${{variables.age}} macro syntax
+  displayName: 'display variables with macro syntax'
 
 
 - script: |
