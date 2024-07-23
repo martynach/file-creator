@@ -39,6 +39,11 @@ steps:
 
 - script: |
     node SimpleFileCreator.js $(FIRSTNAME) $(LASTNAME) $(AGE)
+  displayName: 'Run script with capital letters'
+
+- script: |
+    node SimpleFileCreator.js $(firstName) $(lastName) $(age)
+  displayName: 'Run script with camel case'
 
 
 - task: CopyFiles@2
