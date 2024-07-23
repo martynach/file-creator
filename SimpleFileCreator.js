@@ -6,19 +6,6 @@ console.log(__dirname);
 console.log("Filename: ")
 console.log(__filename)
 
-const filesDirectory = "../files";
-
-function CreateDirectoryFile(message) {
-    fs.mkdir("../files", function(error) {
-        if(error) {
-            console.log(`ERROR: ${error}`);
-            process.exit();
-        } else {
-            WriteFile(fileName, message);
-        }
-    })
-
-}
 
 function WriteFile(fileName, message) {
     fs.writeFile(fileName, message, function (err) {
@@ -31,14 +18,6 @@ function WriteFile(fileName, message) {
 }
 
 
-function CreateFile() {
-    const message = "this is the text that should be inside file."
-    if(fs.existsSync(filesDirectory)) {
-        WriteFile(message);
-    } else {
-        CreateDirectoryFile(message);
-    }
-}
 
 // CreateFile("This text should be inside created file!");
 WriteFile("message.txt", "This text should be inside created file!");

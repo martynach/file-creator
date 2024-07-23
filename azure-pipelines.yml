@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- some-test
 
 pool:
   vmImage: ubuntu-latest
@@ -24,7 +24,7 @@ steps:
   displayName: 'Install node'
 
 - script: |
-    node txt/SimpleFileCreator.js
+    node SimpleFileCreator.js
 
 
 - task: CopyFiles@2
