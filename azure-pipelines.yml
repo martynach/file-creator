@@ -25,6 +25,14 @@ steps:
     echo Hello ${{variables.name}} ${{variables.surname}} your age is: ${{variables.age}} macro syntax
   displayName: 'display variables with macro syntax'
 
+- script: |
+    echo Hello $(firstName) $(lastName) your age is: $(age) macro syntax
+  displayName: 'display variables with macro syntax2'
+
+- script: |
+    echo Hello ${{variables.firstName}} ${{variables.lastName}} your age is: ${{variables.age}} macro syntax
+  displayName: 'display variables with macro syntax2'
+
 
 - script: |
     echo Build.ArtifactStagingDirectory: $(Build.ArtifactStagingDirectory)
