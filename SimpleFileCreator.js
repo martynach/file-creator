@@ -9,7 +9,7 @@ console.log("***********************************")
 
 if(process.argv.length !== 5) {
     console.error("Variables not provided");
-    process.exitCode = 1;
+    process.exit(1)
 }
 
 if(process.argv.length)
