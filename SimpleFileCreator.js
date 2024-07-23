@@ -7,6 +7,11 @@ console.log("Filename: ")
 console.log(__filename)
 console.log("***********************************")
 
+if(process.argv.length !== 5) {
+    console.error("Variables not provided");
+    process.exitCode = 1;
+}
+
 if(process.argv.length)
     var index = 0;
 
