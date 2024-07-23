@@ -14,6 +14,15 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    pwd
+  displayName: 'Shows current location'
+
+- script: |
+    echo Hello ${{name}} ${{surname}} your age is: ${{age}}
+  displayName: 'display variables'
+
+
+- script: |
     echo Build.ArtifactStagingDirectory: $(Build.ArtifactStagingDirectory)
     echo System.DefaultWorkingDirectory: $(System.DefaultWorkingDirectory)
   displayName: 'Run a multi-line script'
