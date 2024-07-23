@@ -19,6 +19,7 @@ function WriteFile(fileName, message) {
 
 
 
+
 // CreateFile("This text should be inside created file!");
 WriteFile("message.txt", "This text should be inside created file!");
 
